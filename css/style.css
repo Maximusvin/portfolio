@@ -91,7 +91,7 @@ body {
 }
 
 .header {
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 70px;
   background-color: #191d28;
   height: 100vh;
@@ -146,22 +146,26 @@ body {
   color: #fbd163;
 }
 
-.menu__link:hover::after {
+.menu__link:hover::after,
+.menu__link:focus::after {
   width: 100%;
 }
 
 .hero {
+  width: 1000px;
   color: #fff;
-  padding-left: 100px;
-  padding-right: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 150px;
+  margin: 0 auto 150px;
 }
 
 .hero__header {
   width: 550px;
+}
+
+.hero__list {
+  padding-left: 40px;
 }
 
 .hero__suptitle {
@@ -182,16 +186,38 @@ body {
   margin-right: 30px;
 }
 
+.hero__suptitle-second {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
 .hero__title {
+  font-size: 45px;
   margin-bottom: 30px;
 }
 
 .yellow {
-  color: #fbd163;
+  color: var(--color-yellow);
 }
 
 .hero__subtitle {
-  line-height: 1.8;
+  line-height: 1.6;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.hero__subtitle:before {
+  display: block;
+  content: '';
+  background-image: url(../images/icon/list.png);
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  position: absolute;
 }
 
 .hero__img {
@@ -201,7 +227,7 @@ body {
 
 .social-icon {
   display: flex;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .social-icon__items:not(:last-child) {
@@ -215,7 +241,7 @@ body {
 .social-icon__img:hover {
   transform: translateY(-3px);
   border-radius: 6px;
-  box-shadow: 0 0 10px #fbd163;
+  box-shadow: 0 0 10px var(--color-yellow);
 }
 
 .arrow {
@@ -223,7 +249,7 @@ body {
   margin: 0 auto;
   width: 30px;
   height: 30px;
-  border: 1px solid #fbd163;
+  border: 1px solid var(--color-yellow);
   border-radius: 50%;
   background-image: url(../images/icon/arrow.png);
   background-repeat: no-repeat;
@@ -235,4 +261,38 @@ body {
 .arrow:focus {
   transform: translateY(4px);
   box-shadow: 0 0 10px #fbd163;
+}
+
+.portfolio {
+  background-color: #161922;
+  padding: 110px 0;
+}
+
+.section-head {
+  text-align: center;
+}
+
+.section-head__title {
+  font-family: 'MuseoSanScyrl';
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-yellow);
+  margin-bottom: 20px;
+}
+
+.section-head__subtitle {
+  color: #fff;
+  margin-bottom: 90px;
+}
+
+.portfolio__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio__card {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }

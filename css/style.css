@@ -311,9 +311,10 @@ body {
   justify-content: space-between;
 }
 
-.overlay-wrap {
+.card__item {
   width: 400px;
-  height: 400px;
+}
+.overlay-wrap {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   margin-bottom: 20px;

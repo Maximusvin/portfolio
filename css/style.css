@@ -1,0 +1,238 @@
+:root {
+  --color-yellow: #fbd163;
+}
+
+@font-face {
+  font-family: 'Wisdom Script';
+  src: url('../fonts/wisdom-script.woff2') format('woff2'), url('../fonts/wisdom-script.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSanScyrl';
+  src: url('../fonts/museosanscyrl-300.woff2') format('woff2'), url('../fonts/museosanscyrl-300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSanScyrl';
+  src: url('../fonts/museosanscyrl-900.woff2') format('woff2'), url('../fonts/museosanscyrl-900.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+img {
+  border-style: none;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  border: none;
+  display: inline-block;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  bottom: 0px;
+  padding: 0px;
+  word-spacing: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.header {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  background-color: #191d28;
+  height: 100vh;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.logo {
+  font-family: 'Sriracha', cursive;
+  font-size: 30px;
+  color: #fbd163;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.menu__link {
+  font-family: 'MuseoSanScyrl';
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: color 0.2s linear;
+  position: relative;
+}
+
+.menu__link::after {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-yellow);
+  transition: all 0.2s linear;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: #fbd163;
+}
+
+.menu__link:hover::after {
+  width: 100%;
+}
+
+.hero {
+  color: #fff;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.hero__header {
+  width: 550px;
+}
+
+.hero__suptitle {
+  color: #fbd163;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero__suptitle:before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: #fbd163;
+  margin-right: 30px;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+}
+
+.yellow {
+  color: #fbd163;
+}
+
+.hero__subtitle {
+  line-height: 1.8;
+}
+
+.hero__img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+}
+
+.social-icon {
+  display: flex;
+  margin-top: 40px;
+}
+
+.social-icon__items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-icon__img {
+  transition: all 0.2s linear;
+}
+
+.social-icon__img:hover {
+  transform: translateY(-3px);
+  border-radius: 6px;
+  box-shadow: 0 0 10px #fbd163;
+}
+
+.arrow {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fbd163;
+  border-radius: 50%;
+  background-image: url(../images/icon/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 49% 55%;
+  transition: all 0.2s linear;
+}
+
+.arrow:hover,
+.arrow:focus {
+  transform: translateY(4px);
+  box-shadow: 0 0 10px #fbd163;
+}

@@ -152,7 +152,7 @@ body {
 }
 
 .hero {
-  width: 1000px;
+  width: 1100px;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -161,7 +161,7 @@ body {
 }
 
 .hero__header {
-  width: 550px;
+  width: 700px;
 }
 
 .hero__list {
@@ -171,6 +171,8 @@ body {
 .hero__suptitle {
   color: #fbd163;
   font-weight: 700;
+  font-style: 17px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -227,7 +229,10 @@ body {
 
 .social-icon {
   display: flex;
-  margin-top: 50px;
+}
+
+.social-icon__link {
+  position: relative;
 }
 
 .social-icon__items:not(:last-child) {
@@ -238,10 +243,25 @@ body {
   transition: all 0.2s linear;
 }
 
-.social-icon__img:hover {
+.social-icon__link::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  top: -10px;
+  left: 2px;
+  transition: all 0.2s linear;
+}
+
+.social-icon__link:hover::before {
+  width: 18px;
+}
+
+.social-icon__img:hover,
+.social-icon__img:focus {
   transform: translateY(-3px);
-  border-radius: 6px;
-  box-shadow: 0 0 10px var(--color-yellow);
 }
 
 .arrow {
@@ -249,7 +269,7 @@ body {
   margin: 0 auto;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--color-yellow);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   background-image: url(../images/icon/arrow.png);
   background-repeat: no-repeat;
@@ -286,13 +306,67 @@ body {
   margin-bottom: 90px;
 }
 
-.portfolio__list {
+.card {
   display: flex;
   justify-content: space-between;
 }
 
-.portfolio__card {
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+.overlay-wrap {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(252, 227, 136, 0.9), rgba(243, 129, 129, 0.9));
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+}
+
+.overlay__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.overlay__btn {
+  display: block;
+  background-color: var(--color-yellow);
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 10px 10px;
+  margin: 0 auto;
+}
+
+.card__item:hover .overlay,
+.card__item:focus .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card__desc {
+  text-align: center;
+  color: #fff;
+}
+
+.card__title {
+  text-transform: uppercase;
+  margin-bottom: 7px;
 }

@@ -79,14 +79,25 @@ input[type='radio'].visually-hidden {
   overflow: hidden;
 }
 
+.btn {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 15px 20px;
+  transition: all 0.2s linear;
+}
+
 .container {
-  width: 1280px;
+  max-width: 1280px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
@@ -151,7 +162,7 @@ body {
 }
 
 .hero {
-  width: 1100px;
+  width: 85.93%;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -160,11 +171,12 @@ body {
 }
 
 .hero__header {
-  width: 700px;
+  width: 63.63%;
 }
 
 .hero__list {
   padding-left: 40px;
+  margin-bottom: 50px;
 }
 
 .hero__suptitle {
@@ -185,12 +197,6 @@ body {
   height: 1px;
   background-color: #fbd163;
   margin-right: 30px;
-}
-
-.hero__suptitle-second {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 15px;
 }
 
 .hero__title {
@@ -219,6 +225,23 @@ body {
   transform: translateY(-50%);
   left: 0;
   position: absolute;
+}
+
+.hero__btn {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-right: 30px;
+}
+
+.hero__btn:hover,
+.hero__btn:focus {
+  background-color: var(--color-yellow);
+  color: #222;
+  border: 1px solid var(--color-yellow);
+  box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }
 
 .hero__img {
@@ -282,8 +305,43 @@ body {
   box-shadow: 0 0 10px #fbd163;
 }
 
-.portfolio {
+.skills {
   background-color: #161922;
+  padding: 110px 0;
+}
+
+.skills__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 62.5%;
+  margin: 0 auto;
+}
+
+.skills__title {
+  color: var(--color-yellow);
+  font-size: 27px;
+  margin-bottom: 40px;
+}
+
+.skills__item {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.skills__icon {
+  margin-bottom: 30px;
+}
+
+.skills__link {
+  color: #fff;
+}
+
+.skills__list {
+  margin-bottom: 50px;
+}
+
+.portfolio {
+  background-color: #191d28;
   padding: 110px 0;
 }
 
@@ -321,7 +379,6 @@ body {
 }
 
 .card__wrap {
-  /* box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); */
   border-radius: 6px;
   margin-bottom: 20px;
   position: relative;
@@ -354,13 +411,8 @@ body {
 }
 
 .overlay__btn {
-  display: block;
   background-color: var(--color-yellow);
   color: rgb(0, 0, 0);
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  border-radius: 25px;
   padding: 10px 20px;
   margin: 0 auto;
 }

@@ -94,7 +94,6 @@ body {
   padding-top: 50px;
   padding-bottom: 70px;
   background-color: #191d28;
-  height: 100vh;
 }
 
 .navigation {
@@ -312,13 +311,21 @@ body {
 }
 
 .card__item {
+  padding: 30px;
   width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
-.overlay-wrap {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+
+.card__img {
+  border-radius: 6px;
+}
+
+.card__wrap {
+  /* box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); */
   border-radius: 6px;
   margin-bottom: 20px;
   position: relative;
+  transition: all 0.2s linear;
 }
 
 .overlay {
@@ -351,9 +358,10 @@ body {
   background-color: var(--color-yellow);
   color: rgb(0, 0, 0);
   text-transform: uppercase;
+  font-size: 12px;
   font-weight: 700;
-  border-radius: 6px;
-  padding: 10px 10px;
+  border-radius: 25px;
+  padding: 10px 20px;
   margin: 0 auto;
 }
 
@@ -361,6 +369,12 @@ body {
 .card__item:focus .overlay {
   opacity: 1;
   visibility: visible;
+}
+
+.card__item:hover .card__wrap,
+.card__item:focus .card__wrap {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 #95e1d3;
 }
 
 .card__desc {

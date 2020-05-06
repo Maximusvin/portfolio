@@ -105,14 +105,15 @@ input[type='radio'].visually-hidden {
 
 .container {
   max-width: 1280px;
-  min-width: 320px;
   margin: 0 auto;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 .header {
@@ -176,7 +177,7 @@ body {
 }
 
 .hero {
-  width: 85.93%;
+  width: 1100px;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -185,7 +186,7 @@ body {
 }
 
 .hero__header {
-  width: 63.63%;
+  width: 700px;
 }
 
 .hero__list {
@@ -216,6 +217,24 @@ body {
 .hero__title {
   font-size: 45px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.hero__title::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  bottom: -5px;
+  transition: all 0.4s linear;
+}
+
+.hero__title:hover::after {
+  background-color: #fff;
+  width: 56%;
 }
 
 .yellow {
@@ -227,6 +246,12 @@ body {
   padding-left: 40px;
   margin-bottom: 15px;
   position: relative;
+  transition: all 0.2s linear;
+}
+
+.hero__subtitle:hover,
+.hero__subtitle:focus {
+  transform: translateX(5px);
 }
 
 .hero__subtitle:before {
@@ -235,15 +260,24 @@ body {
   background-image: url(../images/icon/list.png);
   width: 16px;
   height: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 7px;
   left: 0;
   position: absolute;
+  transition: all 0.2s linear;
 }
 
-.hero__btn {
+.hero__subtitle:hover:before,
+.hero__subtitle:focus:before {
+  transform: rotate(90deg);
+}
+
+.hero__btn_about {
   display: inline-block;
   margin-right: 30px;
+}
+
+.hero__btn_contact {
+  display: inline-block;
 }
 
 .hero__img {

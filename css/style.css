@@ -679,6 +679,11 @@ body {
   .menu__item:not(:last-child) {
     margin-right: 0;
   }
+
+  .menu__link:hover::after,
+  .menu__link:focus::after {
+    width: 0;
+  }
 }
 
 /* 320-576px */

@@ -215,7 +215,7 @@ body {
 }
 
 .hero__title {
-  font-size: 45px;
+  font-size: 37px;
   margin-bottom: 30px;
   position: relative;
 }
@@ -271,6 +271,10 @@ body {
   transform: rotate(90deg);
 }
 
+.hero__btn-wrap {
+  display: flex;
+}
+
 .hero__btn_about {
   display: inline-block;
   margin-right: 30px;
@@ -283,6 +287,13 @@ body {
 .hero__img {
   border-radius: 50%;
   box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+  transition: all 0.2s linear;
+}
+
+.hero__img:hover,
+.hero__img:focus {
+  box-shadow: 0px 0px 35px #fbd163;
+  transform: scale(0.95);
 }
 
 .social-icon {
@@ -349,12 +360,12 @@ body {
 .skills__wrap {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
 }
 
 .skills__left-wrap {
-  width: 500px;
+  width: 600px;
 }
 
 .skills__right-wrap {
@@ -369,7 +380,22 @@ body {
 
 .skills__item {
   color: #fff;
+  line-height: 1.6;
   margin-bottom: 15px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.skills__item:before {
+  display: block;
+  content: '';
+  background-image: url(../images/icon/gear.png);
+  width: 16px;
+  height: 16px;
+  top: 7px;
+  left: 0;
+  position: absolute;
+  transition: all 0.2s linear;
 }
 
 .skills__icon {
@@ -420,11 +446,12 @@ body {
 .card {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card__item {
-  padding: 30px;
-  width: 400px;
+  padding: 20px;
+  width: 380px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
@@ -445,6 +472,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 25px;
   text-align: center;
   color: #fff;
   display: flex;
@@ -459,8 +487,9 @@ body {
 
 .overlay__title {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
+  color: #222;
   margin-bottom: 55px;
 }
 
@@ -469,6 +498,7 @@ body {
   border: 1px solid var(--color-yellow);
   color: rgb(0, 0, 0);
   margin: 0 auto;
+  padding: 10px 25px;
 }
 
 .card__item:hover .overlay,
@@ -479,8 +509,8 @@ body {
 
 .card__item:hover .card__wrap,
 .card__item:focus .card__wrap {
-  transform: translate(-10px, -10px);
-  box-shadow: 10px 10px 0 #95e1d3;
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 0 #95e1d3;
 }
 
 .card__desc {
@@ -491,4 +521,160 @@ body {
 .card__title {
   text-transform: uppercase;
   margin-bottom: 7px;
+  font-size: 14px;
+}
+
+.card__text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.about {
+  background-color: #161922;
+  padding: 110px 0;
+}
+
+.about .container {
+  max-width: 940px;
+}
+
+.about__header {
+  display: flex;
+}
+
+.about__img {
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.about_subtitle {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* ------ Media Queries ------ */
+
+@media screen and (min-width: 1201px) {
+  .card__item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 40px;
+  }
+}
+
+/* 993-1200px */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 940px;
+  }
+
+  .navigation {
+    margin-bottom: 100px;
+  }
+
+  .hero {
+    width: auto;
+    margin-bottom: 25px;
+  }
+
+  .hero__header {
+    margin-bottom: 60px;
+    width: 50%;
+  }
+
+  .card {
+    justify-content: space-around;
+  }
+
+  .card__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 40px;
+  }
+}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+
+  .menu {
+    margin-bottom: 30px;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .hero__header {
+    width: 100%;
+  }
+
+  .hero__suptitle {
+    justify-content: center;
+  }
+
+  .hero__suptitle::before {
+    display: none;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+
+  .hero__btn-wrap {
+    justify-content: center;
+  }
+
+  .skills__wrap {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .skills__left-wrap {
+    width: auto;
+  }
+  .skills__right-wrap {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills__title {
+    text-align: center;
+  }
+
+  .card__item {
+    margin-bottom: 40px;
+  }
+  .about__header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__img {
+    width: 356px;
+    margin: 50px;
+  }
+}
+
+/* 576-768px */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 520px;
+  }
+}
+
+/* 320-576px */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
 }

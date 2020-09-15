@@ -235,20 +235,21 @@ body {
   width: 100%;
 }
 
+.icon,
 .cv__icon {
   display: block;
-  width: 30px;
-  height: 26px;
   fill: #fff;
   transition: all 0.2s linear;
 }
 
 .icon {
-  display: block;
   width: 26px;
   height: 26px;
-  fill: #fff;
-  transition: all 0.2s linear;
+}
+
+.cv__icon {
+  width: 30px;
+  height: 26px;
 }
 
 .cv__icon:hover,
@@ -351,12 +352,20 @@ body {
   display: flex;
 }
 
-.social-icon__link {
-  position: relative;
-}
-
 .social-icon__items:not(:last-child) {
   margin-right: 20px;
+}
+
+.phone {
+  padding-right: 100px;
+  font-weight: 400;
+  color: #fff;
+  transition: color 0.2s linear;
+}
+
+.phone:hover,
+.phone:focus {
+  color: var(--color-yellow);
 }
 
 .scroll {
@@ -370,7 +379,7 @@ body {
   transition: all 0.2s linear;
   position: absolute;
   right: -30px;
-  bottom: 20px;
+  bottom: 6px;
 }
 
 .scroll:after {
@@ -387,7 +396,7 @@ body {
 .scroll:hover:after,
 .scroll:focus:after {
   text-shadow: 0 0 10px var(--color-yellow);
-  bottom: 16px;
+  bottom: 2px;
 }
 
 .skills {

@@ -1,3 +1,5 @@
+'use strict';
+
 $(function () {
   $('body').on('click', '[href*="#"]', function (e) {
     var fixed_offset = '';
@@ -7,3 +9,7 @@ $(function () {
     e.preventDefault();
   });
 });
+
+const yearOfBirth = 1985;
+const newDate = new Date();
+console.log(newDate.getFullYear() - yearOfBirth);

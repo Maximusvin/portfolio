@@ -82,6 +82,16 @@ a:focus {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
 img {
   border-style: none;
   display: block;
@@ -228,13 +238,23 @@ body {
 .cv__icon {
   display: block;
   width: 30px;
-  height: 30px;
+  height: 26px;
+  fill: #fff;
+  transition: all 0.2s linear;
+}
+
+.icon {
+  display: block;
+  width: 26px;
+  height: 26px;
   fill: #fff;
   transition: all 0.2s linear;
 }
 
 .cv__icon:hover,
-.cv__icon:focus {
+.cv__icon:focus,
+.icon:hover,
+.icon:focus {
   fill: var(--color-yellow);
   transform: translateY(1px);
 }
@@ -251,7 +271,8 @@ body {
 }
 
 .hero__header {
-  max-width: 550px;
+  max-width: 650px;
+  margin-right: 10px;
 }
 
 .hero__suptitle {
@@ -262,7 +283,7 @@ body {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .hero__suptitle:before {
@@ -275,13 +296,13 @@ body {
 }
 
 .hero__title {
-  font-size: 48px;
+  font-size: 54px;
   margin-bottom: 26px;
 }
 
 .hero__title-first-element {
   display: block;
-  margin-bottom: 8px;
+  /* margin-bottom: 5px; */
 }
 
 .yellow {
@@ -289,6 +310,7 @@ body {
 }
 
 .hero__subtitle {
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 50px;
 }
@@ -335,31 +357,6 @@ body {
 
 .social-icon__items:not(:last-child) {
   margin-right: 20px;
-}
-
-.social-icon__img {
-  transition: all 0.2s linear;
-}
-
-.social-icon__link::before {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 0;
-  height: 2px;
-  background-color: #fff;
-  top: -10px;
-  left: 2px;
-  transition: all 0.2s linear;
-}
-
-.social-icon__link:hover::before {
-  width: 18px;
-}
-
-.social-icon__img:hover,
-.social-icon__img:focus {
-  transform: translateY(-3px);
 }
 
 .scroll {
